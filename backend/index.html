@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <body>
+        <button onclick="pay()">Pay</button>
+        <script src="https://newwebpay.qa.interswitchng.com/inline-checkout.js"></script>
+        <script>
+            function pay() {
+                window.webpayCheckout({
+                    merchant_code: "MX6072",
+                    pay_item_id: "9405967",
+                    txn_ref: "txn_1774254374784",
+                    amount: 10000,
+                    currency: 566,
+                    site_redirect_url: "https://example.com",
+                    mode: "TEST",
+                    onComplete: function (response) {
+                        console.log(response);
+                    },
+                });
+            }
+        </script>
+    </body>
+</html>
